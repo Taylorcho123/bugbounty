@@ -33,11 +33,22 @@ git clone https://github.com/aboul3la/Sublist3r.git "$TOOLS"/Sublist3r;
 cd "$TOOLS"/Sublist3r;
 sudo pip install -r requirements.txt;
 
+# goaltdns 설치
+source $HOME/.profile;
+go get -u github.com/subfinder/goaltdns;
+
+# massdns 설치
+git clone https://github.com/blechschmidt/massdns.git "$TOOLS"/massdns;
+cd "$TOOLS"/massdns;
+make && make install;
+cd -;
+
+# getValidDNS 설치
+wget -nv https://gist.github.com/Rhynorater/6d84748cb4d73f8d878c3c4a86e2c383/raw/520efc8fbd4b865ddc690b9db6f84e2848bbb679/getValidDNS.sh -O "$TOOLS"/getValidDNS.sh;
+
 # knock 설치
 git clone https://github.com/guelfoweb/knock "$TOOLS"/knock;
 cd "$TOOLS"/knock;
 sudo python setup.py install;
+cd -;
 
-# goaltdns 설치
-source $HOME/.profile;
-go get -u github.com/subfinder/goaltdns;
