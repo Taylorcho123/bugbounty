@@ -3,6 +3,7 @@
 TOOLS="$HOME/bounty/tools";
 
 #기본환경 구성
+sudo apt-get update;
 sudo apt-get install unzip git wget curl nmap masscan nikto whatweb wafw00f chromium-browser python-pip python3-pip p7zip-full -y;
 
 mkdir -pv "$HOME"/bounty/tools;
