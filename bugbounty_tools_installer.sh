@@ -54,4 +54,5 @@ cd -;
 
 #wordlist 다운로드
 wget https://gist.github.com/jhaddix/86a06c5dc309d08580a018c66354a056/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt;
-wget https://github.com/assetnote/commonspeak2-wordlists/raw/master/subdomains/subdomains.txt
+wget https://github.com/assetnote/commonspeak2-wordlists/raw/master/subdomains/subdomains.txt;
+cat all.txt subdomains.txt > all_commonspeak2.txt;
