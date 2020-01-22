@@ -22,6 +22,7 @@ unzip -j  "$TOOLS"/amass.zip -d "$TOOLS"/amass;
 rm "$TOOLS"/amass.zip;
 
 # subfinder 설치
+mkdir -pv "$HOME"/bounty/tools/subfinder;
 wget -nv https://github.com/projectdiscovery/subfinder/releases/download/v2.3.0/subfinder-linux-amd64.tar -O "$TOOLS"/subfinder.tar;
 sudo tar -C "$TOOLS"/subfinder -xzf "$TOOLS"/subfinder.tar;
 mv "$TOOLS"/subfinder-linux-amd64 "$TOOLS"/subfinder
