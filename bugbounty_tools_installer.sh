@@ -23,7 +23,6 @@ rm "$TOOLS"/amass.zip;
 
 # subfinder 설치
 wget -nv https://github.com/projectdiscovery/subfinder/releases/download/v2.3.0/subfinder-linux-amd64.tar -O "$TOOLS"/subfinder.tar;
-tar xf   -d "$TOOLS"/subfinder;
-sudo tar -C "$TOOLS"/subfinder-xzf "$TOOLS"/subfinder.tar;
+sudo tar -C "$TOOLS"/subfinder -xzf "$TOOLS"/subfinder.tar;
 mv "$TOOLS"/subfinder-linux-amd64 "$TOOLS"/subfinder
 rm "$TOOLS"/subfinder.tar;
