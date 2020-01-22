@@ -3,7 +3,7 @@
 TOOLS="$HOME/bounty/tools";
 
 #기본환경 구성
-sudo apt-get install git wget curl nmap masscan nikto whatweb wafw00f chromium-browser python-pip python3-pip p7zip-full unzip -y;
+sudo apt-get install unzip git wget curl nmap masscan nikto whatweb wafw00f chromium-browser python-pip python3-pip p7zip-full -y;
 
 mkdir -pv "$HOME"/bounty/tools;
 
@@ -21,6 +21,8 @@ unzip -j  "$TOOLS"/amass.zip -d "$TOOLS"/amass;
 rm "$TOOLS"/amass.zip;
 
 # subfinder 설치
-wget -nv https://github.com/projectdiscovery/subfinder/releases/download/v2.3.0/subfinder-linux-amd64.tar -O "$TOOLS"/subfinder.zip;
-unzip -j  "$TOOLS"/subfinder.zip -d "$TOOLS"/subfinder;
-rm "$TOOLS"/subfinder.zip;
+wget -nv https://github.com/projectdiscovery/subfinder/releases/download/v2.3.0/subfinder-linux-amd64.tar -O "$TOOLS"/subfinder.tar;
+tar xf   -d "$TOOLS"/subfinder;
+sudo tar -C "$TOOLS"/subfinder-xzf "$TOOLS"/subfinder.tar;
+mv "$TOOLS"/subfinder-linux-amd64 "$TOOLS"/subfinder
+rm "$TOOLS"/subfinder.tar;
