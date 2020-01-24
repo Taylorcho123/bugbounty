@@ -4,7 +4,7 @@ TOOLS="$HOME/bounty/tools";
 
 #기본환경 구성
 sudo apt-get update;
-sudo apt-get install unzip git wget curl nmap masscan nikto whatweb wafw00f chromium-browser python-pip python3-pip p7zip-full python-requests python-dnspython python-argparse -y;
+sudo apt-get install unzip git gcc libpcap-dev wget curl nmap masscan nikto whatweb wafw00f chromium-browser python-pip python3-pip p7zip-full python-requests python-dnspython python-argparse -y;
 
 mkdir -pv "$HOME"/bounty/tools;
 
@@ -36,15 +36,14 @@ sudo pip install -r requirements.txt;
 # goaltdns 설치
 source $HOME/.profile;
 go get -u github.com/subfinder/goaltdns;
+go get -u github.com/sensepost/gowitness;
+
 
 # massdns 설치
 git clone https://github.com/blechschmidt/massdns.git "$TOOLS"/massdns;
 cd "$TOOLS"/massdns;
 make && make install;
 cd -;
-
-# getValidDNS 설치
-wget -nv https://gist.github.com/Rhynorater/6d84748cb4d73f8d878c3c4a86e2c383/raw/520efc8fbd4b865ddc690b9db6f84e2848bbb679/getValidDNS.sh -O "$TOOLS"/getValidDNS.sh;
 
 # knock 설치
 git clone https://github.com/guelfoweb/knock "$TOOLS"/knock;
