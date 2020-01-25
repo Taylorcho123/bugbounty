@@ -37,7 +37,7 @@ sudo pip install -r requirements.txt;
 source $HOME/.profile;
 go get -u github.com/subfinder/goaltdns;
 go get -u github.com/sensepost/gowitness;
-
+go get -u github.com/ffuf/ffuf;
 
 # massdns 설치
 git clone https://github.com/blechschmidt/massdns.git "$TOOLS"/massdns;
