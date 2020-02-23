@@ -31,6 +31,7 @@ rm "$TOOLS"/subfinder.tar;
 # findomain  설치
 mkdir -pv "$HOME"/bounty/tools/findomain;
 wget -nv https://github.com/Edu4rdSHL/findomain/releases/download/1.4.1/findomain-linux -O "$TOOLS"/findomain;
+chmod 777 "$TOOLS"/findomain;
 
 # Sublist3r 설치
 git clone https://github.com/aboul3la/Sublist3r.git "$TOOLS"/Sublist3r;
