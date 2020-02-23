@@ -46,12 +46,17 @@ cd "$TOOLS"/Syborg;
 pip3 install -r requirements.txt;
 cd -;
 
-# goaltdns + gowitness + ffuf +  assetfinder 설치
+# goaltdns + gowitness + ffuf +  assetfinder + tok + httprobe + meg + unfurl 설치
 source $HOME/.profile;
 go get -u github.com/subfinder/goaltdns;
 go get -u github.com/sensepost/gowitness;
 go get -u github.com/ffuf/ffuf;
 go get -u github.com/tomnomnom/assetfinder;
+go get -u github.com/tomnomnom/hacks/tok;
+go get -u github.com/tomnomnom/httprobe;
+go get -u github.com/tomnomnom/meg;
+go get -u github.com/tomnomnom/unfurl;
+
 
 # massdns 설치
 git clone https://github.com/blechschmidt/massdns.git "$TOOLS"/massdns;
@@ -65,6 +70,21 @@ cd "$TOOLS"/knock;
 sudo python setup.py install;
 cd -;
 
+# LinkFinder 설치
+git clone https://github.com/GerbenJavado/LinkFinder.git  "$TOOLS"/LinkFinder;
+cd "$TOOLS"/LinkFinder;
+python setup.py install;
+cd -;
+
+# Arjun 설치
+git clone https://github.com/s0md3v/Arjun "$TOOLS"/Arjun;
+
+# Arjun 설치
+git clone https://github.com/s0md3v/XSStrike "$TOOLS"/XSStrike;
+git clone https://github.com/DanMcInerney/xsscrapy "$TOOLS"/xsscrapy;
+pip install -r "$TOOLS"/xsscrapy/requirements.txt;
+pip install -r "$TOOLS"/XSStrike/requirements.txt;
+  
 #wordlist 다운로드
 wget https://gist.github.com/jhaddix/86a06c5dc309d08580a018c66354a056/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt;
 wget https://github.com/assetnote/commonspeak2-wordlists/raw/master/subdomains/subdomains.txt;
