@@ -28,16 +28,30 @@ sudo tar -C "$TOOLS"/subfinder -xzf "$TOOLS"/subfinder.tar;
 mv "$TOOLS"/subfinder/subfinder-linux-amd64 "$TOOLS"/subfinder/subfinder
 rm "$TOOLS"/subfinder.tar;
 
+# findomain  설치
+mkdir -pv "$HOME"/bounty/tools/findomain;
+wget -nv https://github.com/Edu4rdSHL/findomain/releases/download/1.4.1/findomain-linux -O "$TOOLS"/findomain;
+
 # Sublist3r 설치
 git clone https://github.com/aboul3la/Sublist3r.git "$TOOLS"/Sublist3r;
 cd "$TOOLS"/Sublist3r;
 sudo pip install -r requirements.txt;
 
-# goaltdns 설치
+#dnsgen 설치
+pip3 install dnsgen;
+
+#Syborg 설치
+git clone https://github.com/MilindPurswani/Syborg.git  "$TOOLS"/Syborg;
+cd "$TOOLS"/Syborg;
+pip3 install -r requirements.txt;
+cd -;
+
+# goaltdns + gowitness + ffuf +  assetfinder 설치
 source $HOME/.profile;
 go get -u github.com/subfinder/goaltdns;
 go get -u github.com/sensepost/gowitness;
 go get -u github.com/ffuf/ffuf;
+go get -u github.com/tomnomnom/assetfinder;
 
 # massdns 설치
 git clone https://github.com/blechschmidt/massdns.git "$TOOLS"/massdns;
