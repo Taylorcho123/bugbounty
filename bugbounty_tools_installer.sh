@@ -82,6 +82,7 @@ git clone https://github.com/s0md3v/Arjun "$TOOLS"/Arjun;
 # XSStrike + xsscrapy 설치
 git clone https://github.com/s0md3v/XSStrike "$TOOLS"/XSStrike;
 git clone https://github.com/DanMcInerney/xsscrapy "$TOOLS"/xsscrapy;
+gem install XSpear;
 pip install -r "$TOOLS"/xsscrapy/requirements.txt;
 pip install -r "$TOOLS"/XSStrike/requirements.txt;
   
