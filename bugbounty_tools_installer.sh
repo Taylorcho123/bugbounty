@@ -79,7 +79,7 @@ cd -;
 # Arjun 설치
 git clone https://github.com/s0md3v/Arjun "$TOOLS"/Arjun;
 
-# Arjun 설치
+# XSStrike + xsscrapy 설치
 git clone https://github.com/s0md3v/XSStrike "$TOOLS"/XSStrike;
 git clone https://github.com/DanMcInerney/xsscrapy "$TOOLS"/xsscrapy;
 pip install -r "$TOOLS"/xsscrapy/requirements.txt;
